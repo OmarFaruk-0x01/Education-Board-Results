@@ -4,7 +4,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="src/assets/res/mipmap-xxhdpi/ic_launcher_round.png" alt="Logo" width="80" height="80">
+    <img src="Frontend/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" alt="Logo" width="80" height="80">
   </a>
 
 # **Education Board Result (EBR)**
