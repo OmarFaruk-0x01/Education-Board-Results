@@ -98,6 +98,7 @@ There are some prerequisites to run this app and server
 * **Python3**
   <details>
   <summary>Linux</summary>
+  
   ```sh
   sudo apt-get install python3
   sudo apt-get instsll python3-pip
@@ -105,6 +106,7 @@ There are some prerequisites to run this app and server
   </details>
   <details>
   <summary >MacOS</summary>
+  
   ```sh
   brew instsll python3 python3-pip
   ```
