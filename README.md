@@ -10,14 +10,12 @@
 # **Education Board Result (EBR)**
 
   <p align="center">
-    EBR is a android app that help to get Board Exam's Result easily. And export a printable PDF file. 
+    EBR is a android app that help to get Board Exam's Result easily and generate a printable PDF file. 
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://github.com/OmarFaruk-0x01/Education-Board-Results/issues">Report Bug</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/OmarFaruk-0x01/Education-Board-Results/issues">Request Feature</a>
   </p>
 </div>
 
@@ -54,9 +52,24 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<div style="display:flex; flex-wrap: wrap;gap: 10px">
+<img src="Screenshots/EBR1.jpg" 
+style="object-fit: contain; width: 200px;height: 235px"
+/>
+<img 
+src="Screenshots/EBR2.jpg"
+style="object-fit: contain; width: 200px;height: 235px"
+/>
+<img 
+src="Screenshots/EBR2.jpg"
+style="object-fit: contain; width: 200px;height: 235px"
+/><img 
+src="Screenshots/EBR2.jpg"
+style="object-fit: contain; width: 200px;height: 235px; background: red"
+/>
+</div>
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+EBR is a mobile version of educationboardresults.gov.bd with some extra features e.g. Generating PDF, and clean UI. This app was made with React Native as a Frontend Technology and Python Flask as a Backend Technology. This app will help those people who can't use websites. People can easily get their results and also generate PDF in one click.  
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -70,8 +83,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 #### Backend Technology  
 * [Python Flask](https://svelte.dev/) 
 * [BeautifulSoup4](https://pypi.org/project/beautifulsoup4/)
-* [HTML to PDF](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+* [HTML to PDF]()
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -199,4 +211,7 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
-[product-screenshot]: images/screenshot.png
+[ps1]: Screenshots/EBR1.jpg
+[ps2]: Screenshots/EBR2.jpg
+[ps3]: Screenshots/EBR3.jpg
+[ps4]: Screenshots/EBR4.jpg
