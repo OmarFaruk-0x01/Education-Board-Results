@@ -10,7 +10,7 @@
 # **Education Board Result (EBR)**
 
   <p align="center">
-    Education board result is   
+    EBR is a android app that help to get Board Exam's Result easily. And export a printable PDF file. 
     <br />
     <br />
     <a href="https://github.com/github_username/repo_name">View Demo</a>
