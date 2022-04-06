@@ -88,7 +88,7 @@ EBR is a mobile version of educationboardresults.gov.bd with some extra features
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-### Prerequisites
+# Prerequisites
 There are some prerequisites to run this app and server
 
 * **NPM**
@@ -115,12 +115,12 @@ There are some prerequisites to run this app and server
   <summary>Windows</summary>
   Download Python Binary by <a href="https://www.python.org/ftp/python/3.10.4/python-3.10.4-amd64.exe" download>clicking here</a> 
   </details>
-  <br>
+  
 * **React Native**<br>
   React native has a greate [documentation](https://reactnative.dev/docs/environment-setup) for enviroment setup 
 
 
-## Installation
+# Installation
 ### Frontend
 1. Clone the repo
      ```sh
@@ -150,7 +150,7 @@ There are some prerequisites to run this app and server
 
 
 <!-- USAGE EXAMPLES -->
-## Usage
+# Usage
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
@@ -161,7 +161,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 
 <!-- ROADMAP -->
-## Roadmap
+# Roadmap
 
 - [ ] 
 - [ ] Feature 2
