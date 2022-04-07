@@ -128,6 +128,7 @@ There are some prerequisites to run this app and server
   </details>
 ##### 
 * **React Native**
+
   React native has a greate [documentation](https://reactnative.dev/docs/environment-setup) for enviroment setup 
 
 
