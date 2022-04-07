@@ -1,16 +1,16 @@
 <div id="top"></div>
 <!-- PROJECT LOGO -->
 <br />
-<div align="left" style="display:flex">
-<div align="center" style="display:flex; align-items: center; justify-content: center; margin-right: 10px">
+<div align="center" style="display:flex">
+
   <a href="https://github.com/github_username/repo_name" >
     <img src="Frontend/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" alt="Logo" width="130" height="130">
   </a>
-</div>
-<div>
+
+
 
 ## **Education Board Result (EBR)**
-  <p align="left">
+  <p align="center">
     EBR is a android app that help to get Board Exam's Result <br>easily and generate a printable PDF file. 
     <br />
     <br />
@@ -18,7 +18,7 @@
     ·
     <a href="https://github.com/OmarFaruk-0x01/Education-Board-Results/issues">Request Feature</a>
   </p>
-</div>
+
 </div>
 
 
