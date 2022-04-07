@@ -36,7 +36,6 @@ def convert_html_to_pdf(source_html, output_filename):
     result_file = open(output_filename, "w+b")
 
     # convert HTML to PDF
-
     pisa_status = pisa.CreatePDF(
         source_html,                # the HTML to convert
         dest=result_file, raise_exception=True)           # file handle to recieve result
@@ -48,16 +47,23 @@ def convert_html_to_pdf(source_html, output_filename):
 
 
 def GetResult(exam, year, board, roll, reg):
+    # Create a request session
     ss = req.Session()
+    # get the HTML from edu gov site
     indexPage = ss.get("http://www.educationboardresults.gov.bd/index.php")
+    # parse the html
     soup = bs(indexPage.content, 'html.parser')
+    # find captcha field
     captcha_string = soup.select_one(
         "body fieldset > table > tr:nth-child(7) > td:nth-child(2)").text
+    # calculate the captcha
     captcha_solved = eval(captcha_string)
+    #make a random user agents
     headers = {
         "User-Agent": choice(UserAgents),
         "Content-Type": "application/x-www-form-urlencoded"
     }
+    # make a data object for sending post req to get the result
     data = {
         "sr": '3',  # f"{random.randint(1,5)}",
         "et": '2',  # f"{random.randint(1,5)}",
@@ -69,18 +75,21 @@ def GetResult(exam, year, board, roll, reg):
         'value_s': captcha_solved,
         'button2': 'Submit'
     }
+    # send a post request the result route to 
     resultPage = ss.post(
         'http://www.educationboardresults.gov.bd/result.php', data=data, headers=headers)
-    # resultPage = ss.get(
-    #     'https://stainedfinefirewall.haxzsadik.repl.co/')
+    # parse the html
     resultSoup = bs(resultPage.content, 'html.parser')
+    
+    # ------ Replace some string ---------
     html = resultPage.text.replace(
         "src=\"", "src=\"http://www.educationboardresults.gov.bd/")
     html = html.replace(
         "href=\"", "href=\"http://www.educationboardresults.gov.bd/")
     html = html.replace(
         "background=\"", "background=\"http://www.educationboardresults.gov.bd/")
-
+    # ------ Replace some string ---------
+    # find all results fields
     AllinfoTable = resultSoup.find_all('table', {"class": 'black12'})
     if (AllinfoTable):
         infoTable = AllinfoTable[0]
@@ -112,7 +121,7 @@ def GetResult(exam, year, board, roll, reg):
                 'subjectCode': row.select_one('td:nth-child(1)').text.strip(),
                 'subjectGPA': row.select_one('td:nth-child(3)').text.strip()
             })
-
+        # return result objects
         return {
             "StatusCode": 200,
             "name": name,
