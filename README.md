@@ -1,9 +1,9 @@
 <div id="top"></div>
 <!-- PROJECT LOGO -->
 <br />
-<div align="center" style="display:flex">
+<div align="center">
 
-  <a href="https://github.com/github_username/repo_name" >
+  <a href="https://github.com/OmarFaruk-0x01/Education-Board-Result" >
     <img src="Frontend/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" alt="Logo" width="130" height="130">
   </a>
 
