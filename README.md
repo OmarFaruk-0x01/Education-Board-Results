@@ -65,25 +65,26 @@ EBR is a mobile version of educationboardresults.gov.bd with some extra features
 1. All Exam Boards, Exam Year and Exam name selections and Board Roll Reg input with classic UI.
    <details ><summary>snapshot</summary>
 
-   ![Feature_1][ps1]
+   
+    <img src="Screenshots/EBR1.jpg" alt="Logo" width="300" >
 
    </details>
 2. Results are beautifully organized with GPAs and PDF generation
    <details ><summary>snapshot</summary>
 
-   ![Feature_2][ps2]
+   <img src="Screenshots/EBR2.jpg" alt="Logo" width="300" >
 
    </details>
 3. Server side printable PDF generation. In one click.
    <details ><summary>snapshot</summary>
 
-   ![Feature_3][ps3]
+   <img src="Screenshots/EBR3.jpg" alt="Logo" width="300" >
 
    </details>
 4. Save Your Result's PDF in your storage
    <details ><summary>snapshot</summary>
 
-   ![Feature_3][ps4]
+   <img src="Screenshots/EBR4.jpg" alt="Logo" width="300" >
 
    </details>
 ## Built With 
