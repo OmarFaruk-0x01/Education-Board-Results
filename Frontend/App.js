@@ -1,5 +1,5 @@
 import React from 'react';
-import {LogBox} from 'react-native';
+import {LogBox, Platform} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {requestStoragePermission, ROUTE} from './src/Constants/';
@@ -8,7 +8,9 @@ const Stack = createStackNavigator();
 LogBox.ignoreLogs(['new NativeEventEmitter']);
 const App = function () {
   React.useEffect(() => {
-    requestStoragePermission();
+    if (Platform.OS === 'android') {
+      requestStoragePermission();
+    }
   }, []);
 
   return (

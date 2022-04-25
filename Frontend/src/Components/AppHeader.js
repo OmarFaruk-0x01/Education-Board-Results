@@ -18,9 +18,9 @@ const AppHeader = function ({withBackButton}) {
         />
       )}
       <Avatar.Image
-        size={40}
+        size={50}
         source={require('../assets/Images/edu_logo.png')}
-        style={{padding: 0, margin: 0}}
+        style={{padding: 0, margin: 0, backgroundColor: 'white'}}
       />
       <Appbar.Content
         title="Education Board Result"

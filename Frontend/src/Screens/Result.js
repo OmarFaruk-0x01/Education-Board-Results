@@ -6,6 +6,7 @@ import {
   ToastAndroid,
   NativeModules,
   Alert,
+  Platform,
 } from 'react-native';
 import {
   Button,
@@ -119,13 +120,16 @@ const DownloadButton = function ({data: MainData}) {
         if (!data) {
           return;
         }
-        ToastAndroid.showWithGravity(
-          data.message,
-          ToastAndroid.SHORT,
-          ToastAndroid.BOTTOM,
-        );
+        if (Platform.OS === 'android') {
+          ToastAndroid.showWithGravity(
+            data.message,
+            ToastAndroid.SHORT,
+            ToastAndroid.BOTTOM,
+          );
+        }
         setLoad(false);
         setVisiable(true);
+        console.log(data);
         // // console.log(data);
         // fetch(data.downLink)
         //   .then(data => {
@@ -151,18 +155,23 @@ const DownloadButton = function ({data: MainData}) {
             })
               .promise.then(data => {
                 setVisiable(false);
+                console.log('down then:', data);
                 if (data.statusCode !== 200) {
                   Alert.alert('Failed!', 'Downloading Failed. Try again');
                 } else {
-                  ToastAndroid.showWithGravity(
-                    'Download Complete',
-                    ToastAndroid.SHORT,
-                    ToastAndroid.BOTTOM,
-                  );
+                  if (Platform.OS === 'android') {
+                    ToastAndroid.showWithGravity(
+                      'Download Complete',
+                      ToastAndroid.SHORT,
+                      ToastAndroid.BOTTOM,
+                    );
+                  }
+                  RNSF.readDir(DownloadDir).then(data => {console.log('Download comp: ',data);})
                 }
               })
               .catch(e => {
                 setVisiable(false);
+                console.log('down catch: ', e);
                 Alert.alert('Failed!', e.toString());
                 // console.log(e);
               });
@@ -177,6 +186,11 @@ const DownloadButton = function ({data: MainData}) {
         });
       });
   }
+
+
+  console.log(RNSF.DocumentDirectoryPath);
+  console.log(RNSF.DownloadDirectoryPath);
+  console.log(RNSF.LibraryDirectoryPath);
 
   return (
     <>

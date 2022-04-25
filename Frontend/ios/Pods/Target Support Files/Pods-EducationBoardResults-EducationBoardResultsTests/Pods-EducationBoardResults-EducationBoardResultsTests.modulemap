@@ -1,0 +1,6 @@
+module Pods_EducationBoardResults_EducationBoardResultsTests {
+  umbrella header "Pods-EducationBoardResults-EducationBoardResultsTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

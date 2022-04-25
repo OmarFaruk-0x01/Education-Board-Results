@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import {TextInput, Button, Banner, Snackbar} from 'react-native-paper';
-import {View, Image} from 'react-native';
+import {View, Image, Platform} from 'react-native';
 import {AppHeader, DropDownMenu} from '../Components';
-import {BASEURL, BOARD, EXAM, YEAR} from '../Constants';
+import {BASEURL, BOARD, DownloadDir, EXAM, YEAR} from '../Constants';
 import RNSF from 'react-native-fs';
 
 const HomeScreen = function ({navigation}) {
@@ -15,7 +15,7 @@ const HomeScreen = function ({navigation}) {
   const [boardReg, setBoardReg] = useState('');
   const [snackVisiable, setSnackVisiable] = useState(false);
   const [snackMessage, setSnackMessage] = useState('');
-
+  const OutPutPath = Platform.OS === "ios" ? RNSF.DocumentDirectoryPath : RNSF.ExternalStorageDirectoryPath;
   const ResetAllInput = React.useCallback(function () {
     setExam(null);
     setYear(null);
@@ -67,11 +67,12 @@ const HomeScreen = function ({navigation}) {
       });
   }
   function CheckServer() {
+    
     RNSF.exists(
-      RNSF.ExternalStorageDirectoryPath + '/Documents/EDU_RESULT',
+      DownloadDir
     ).then(b => {
       if (!b) {
-        RNSF.mkdir(RNSF.ExternalStorageDirectoryPath + '/Documents/EDU_RESULT');
+        RNSF.mkdir(DownloadDir);
       }
     });
     fetch(BASEURL + '/')

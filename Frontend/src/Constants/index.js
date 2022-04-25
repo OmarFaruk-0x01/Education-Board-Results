@@ -1,11 +1,11 @@
-import {PermissionsAndroid} from 'react-native';
+import {PermissionsAndroid, Platform} from 'react-native';
 import {HomeScreen, ResultScreen} from '../Screens/';
 import RNSF from 'react-native-fs';
 
 export const BASEURL = 'http://127.0.0.1:5000';
 
-export const DownloadDir =
-  RNSF.ExternalStorageDirectoryPath + '/Documents/EDU_RESULT';
+export const DownloadDir = Platform.OS === 'android' ?
+  RNSF.ExternalStorageDirectoryPath + '/Documents/EDU_RESULT' : RNSF.DocumentDirectoryPath + '/EDU_RESULT';
 export const ROUTE = [
   {
     name: 'Home',
@@ -53,11 +53,15 @@ export const YEAR = Array(40)
 
 export let requestStoragePermission = async () => {
   try {
-    const granted = await PermissionsAndroid.request(
-      PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE,
-    );
-
-    return granted === PermissionsAndroid.RESULTS.GRANTED;
+    if (Platform.OS === 'android') {
+      const granted = await PermissionsAndroid.request(
+        PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE,
+      );
+  
+      return granted === PermissionsAndroid.RESULTS.GRANTED;
+    } else {
+      return true;
+    }
   } catch (err) {
     console.warn(err);
   }
