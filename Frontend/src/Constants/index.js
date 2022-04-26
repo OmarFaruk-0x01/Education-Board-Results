@@ -2,7 +2,7 @@ import {PermissionsAndroid, Platform} from 'react-native';
 import {HomeScreen, ResultScreen} from '../Screens/';
 import RNSF from 'react-native-fs';
 
-export const BASEURL = 'http://127.0.0.1:5000';
+export const BASEURL = __DEV__ ? 'http://127.0.0.1:5000' : 'https://educationboardresult-bd.herokuapp.com';
 
 export const DownloadDir = Platform.OS === 'android' ?
   RNSF.ExternalStorageDirectoryPath + '/Documents/EDU_RESULT' : RNSF.DocumentDirectoryPath + '/EDU_RESULT';

@@ -2,7 +2,7 @@ import {useNavigation} from '@react-navigation/native';
 import React from 'react';
 import {Appbar, Avatar} from 'react-native-paper';
 
-const AppHeader = function ({withBackButton}) {
+const AppHeader = function ({withBackButton, title, subtitle}) {
   const nav = useNavigation();
   return (
     <Appbar.Header
@@ -23,8 +23,8 @@ const AppHeader = function ({withBackButton}) {
         style={{padding: 0, margin: 0, backgroundColor: 'white'}}
       />
       <Appbar.Content
-        title="Education Board Result"
-        subtitle=""
+        title={title ? title : "Education Board Result"}
+        subtitle={subtitle ? subtitle : ''}
         style={{
           paddingHorizontal: 3,
         }}

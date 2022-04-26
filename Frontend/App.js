@@ -8,6 +8,8 @@ const Stack = createStackNavigator();
 LogBox.ignoreLogs(['new NativeEventEmitter']);
 const App = function () {
   React.useEffect(() => {
+    console.log(`${__DEV__ ? "Dev" : "Prod"} Server Linked. `);
+    
     if (Platform.OS === 'android') {
       requestStoragePermission();
     }

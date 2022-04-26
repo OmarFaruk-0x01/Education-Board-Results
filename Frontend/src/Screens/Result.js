@@ -129,7 +129,7 @@ const DownloadButton = function ({data: MainData}) {
         }
         setLoad(false);
         setVisiable(true);
-        console.log(data);
+        
         // // console.log(data);
         // fetch(data.downLink)
         //   .then(data => {
@@ -166,6 +166,9 @@ const DownloadButton = function ({data: MainData}) {
                       ToastAndroid.BOTTOM,
                     );
                   }
+                  else {
+                    Alert.alert("Download Completed")
+                  }
                   RNSF.readDir(DownloadDir).then(data => {console.log('Download comp: ',data);})
                 }
               })
@@ -188,9 +191,7 @@ const DownloadButton = function ({data: MainData}) {
   }
 
 
-  console.log(RNSF.DocumentDirectoryPath);
-  console.log(RNSF.DownloadDirectoryPath);
-  console.log(RNSF.LibraryDirectoryPath);
+
 
   return (
     <>
@@ -222,7 +223,7 @@ const ResultScreen = function () {
   } = useRoute();
   return (
     <>
-      <AppHeader withBackButton={true} />
+      <AppHeader title={data.name} subtitle={`${data.roll} - ${data.group}`} withBackButton={true} />
 
       <ScrollView style={{flex: 1, backgroundColor: '#fff'}}>
         <SingleInfoView Key={'Roll NO.'} Value={data.roll} />
