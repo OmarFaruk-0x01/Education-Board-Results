@@ -13,7 +13,10 @@
   <p align="center">
     EBR is a android app that help to get Board Exam's Result <br>easily and generate a printable PDF file. 
     <br />
-    <br />
+    <div>
+  <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android" width="130" height="40" >
+      <img src="https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=ios&logoColor=white" alt="Android" width="130" height="40" >
+</div>
     <a href="https://github.com/OmarFaruk-0x01/Education-Board-Results/issues">Report Bug</a>
     ·
     <a href="https://github.com/OmarFaruk-0x01/Education-Board-Results/issues">Request Feature</a>
